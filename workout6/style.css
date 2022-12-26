@@ -1,0 +1,32 @@
+
+
+body{
+    margin: 0;
+}
+
+h1{
+    margin-top: 0;
+}
+
+
+.div1 {
+    background-color: rgb(35, 169, 223);
+    padding: 20px;
+    margin-bottom: 0%;
+    
+}
+.div2 {
+    background-color: chartreuse;
+    padding: 20px;
+    margin: 0%;
+}
+.div3{
+    background-color: rgb(63, 48, 189);
+    padding: 20px;
+
+}
+#center {
+    width: 100px;
+    margin: auto;
+    text-align: center;
+}
