@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Float Layout</title>
+    
+    <style>
+ *{
+    box-sizing: border-box;
+ }
+.box1 p{
+    text-align: center;
+}
+
+.box2 p{
+    text-align: left;
+}
+.box3 p{
+    text-align: right;
+}
+.box4 p{
+    text-align: center;
+}
+.box1{
+    background-color:darkorange;
+    border: 1px solid;
+    padding: 5px;
+    margin: 2px; ;
+}
+.box2{
+    background-color:darkgreen;
+
+    float: left;
+    width: 30%;
+
+   
+}
+.box3{
+    background-color:darkmagenta;
+    border: 1px solid;
+    margin: right 10px; ;
+    float: right;
+    width: 69%;
+    
+    
+}
+.box4{
+    background-color:cornflowerblue;
+    border: 1px solid;
+    padding: 5px;
+    margin: 2px; ;
+    max-width: auto;
+    
+}
+.container{
+    width: 900px;
+    max-height: 90%;
+    margin: auto;
+    align-self: auto;
+    
+  
+}
+.clr{
+    clear: both;
+} 
+.box{
+    border: 1px solid;
+    padding: 5px;
+    height: 300px;
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+   <div class="box1">
+     <p>Header</p>
+
+   </div>
+   <div class="box2 box">
+    <p>&nbsp Side</p>
+   </div>
+   <div class="box3 box">
+    <p>Main &nbsp</p>
+   </div>
+   <div class="clr"></div>
+   <div class="box4 ">
+    <p>Footer</p>
+   </div>
+
+    </div>
+</body>
+</html>
