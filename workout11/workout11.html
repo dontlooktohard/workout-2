@@ -9,85 +9,67 @@
     <style>
  *{
     box-sizing: border-box;
+    
  }
-.box1 p{
-    text-align: center;
-}
 
-.box2 p{
-    text-align: left;
-}
-.box3 p{
-    text-align: right;
-}
-.box4 p{
-    text-align: center;
-}
-.box1{
+
+
+.navbar{
     background-color:darkorange;
-    border: 1px solid;
+    border: 1px solid black;
     padding: 5px;
-    margin: 2px; ;
+    margin: 2px 0; 
+    text-align: center;
 }
-.box2{
-    background-color:darkgreen;
-
+.Side{
+    background:darkgreen;
+    border: 1px solid black;
     float: left;
     width: 30%;
+    height: 300px;
 
    
 }
-.box3{
+.Main{
     background-color:darkmagenta;
-    border: 1px solid;
-    margin: right 10px; ;
+    border: 1px solid black;
     float: right;
-    width: 69%;
+    height: 300px;
+    width: calc(70% - 5px);
+    margin-bottom: 2px;
+    text-align: right;
     
     
 }
-.box4{
+.footer{
     background-color:cornflowerblue;
-    border: 1px solid;
-    padding: 5px;
-    margin: 2px; ;
-    max-width: auto;
+    border: 1px solid black;
+    padding: 15px;
+    margin-top: 15px; 
+    text-align: center;
+    clear: both;
     
 }
 .container{
-    width: 900px;
+    max-width: 900px;
     max-height: 90%;
-    margin: auto;
+    margin: 0 auto;
     align-self: auto;
     
   
 }
-.clr{
-    clear: both;
-} 
-.box{
-    border: 1px solid;
-    padding: 5px;
-    height: 300px;
-}
+
     </style>
 </head>
 <body>
     <div class="container">
-   <div class="box1">
+   <nav class="navbar">
      <p>Header</p>
 
-   </div>
-   <div class="box2 box">
-    <p>&nbsp Side</p>
-   </div>
-   <div class="box3 box">
-    <p>Main &nbsp</p>
-   </div>
-   <div class="clr"></div>
-   <div class="box4 ">
-    <p>Footer</p>
-   </div>
+   </nav>
+   <aside class="Side box">&nbsp Side</aside>
+   <main class="Main box">Main &nbsp</main>
+   <footer class="footer ">Footer</footer>
 
     </div>
 </body>
