@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive typography</title>
+    <style>
+@media only screen and (max-width: 500px){
+            body{
+                color:yellow;
+                font-size: 40px;
+                font-size: 0.6rem;
+            }
+     
+        } 
+          /*tablet */
+        @media(min-width:501px) and (max-width: 768px){
+            body{
+                background-color: rgb(234, 11, 59);
+                color:rgb(0, 255, 68);
+                font-size: 50px;
+                font-size: 1.5rem;
+            }
+         
+        } 
+          /*normal*/
+        @media(min-width:769px) and (max-width: 1200px){
+            body{
+                background-color: blue;
+                color: rgb(184, 233, 10);
+                font-size: 60px;
+                font-size: 2.0rem;
+               
+            }
+      
+        } 
+          /*wide screen */
+           /*normal*/
+        @media(min-width:1200px){
+            body{
+                background-color: rgb(2, 2, 2);
+                font-size: 80px;
+                color: chartreuse;
+            }
+            #header{
+                font-size: 2.5rem;
+            }
+            
+        }
+    </style>
+</head>
+<body>
+    <header id="header">hello my friend it is i alibaba</header>
+</body>
+</html>
