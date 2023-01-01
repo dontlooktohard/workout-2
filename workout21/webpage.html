@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Refactor</title>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+  <style>
+p{
+    font-size: 40px;
+    color: #04AA6D;
+
+}
+.card{
+    float:right 
+
+}
+.side{
+  float: left;
+}   
+body{
+  background-image: url(https://codetheweb.blog/assets/img/posts/css-advanced-background-images/cover.jpg);
+
+} 
+.box{
+
+  padding: 20px;
+  margin: 20px;
+}
+#navbar {
+  overflow: hidden;
+  background-color: blueviolet;
+}
+
+#navbar a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 30px;
+}
+
+
+#navbar a.active {
+  background-color: blueviolet;
+  color: rgb(128, 14, 37);
+
+}
+
+.content {
+  padding: 16px;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + .content {
+  padding-top: 60px;
+}
+.slidecontiner{
+    width: 100%
+}
+.slider {
+  -webkit-appearance: none;  
+  appearance: none;
+  width: 700px; 
+  height: 25px; 
+  background: gray; 
+  outline: none; 
+  opacity: 0.7; 
+  -webkit-transition: .2s; 
+  transition: opacity .2s;
+
+}
+   /*phone */
+   @media only screen and (max-width: 500px){
+            body{
+                color:yellow;
+                font-size: 40px;
+            }
+     
+        } 
+          /*tablet */
+        @media(min-width:501px) and (max-width: 768px){
+            body{
+                color:red;
+                font-size: 50px;
+            }
+         
+        } 
+          /*normal*/
+        @media(min-width:769px) and (max-width: 1200px){
+            body{
+                color: dodgerblue;
+                font-size: 60px;
+                
+               
+            }
+      
+        } 
+          /*wide screen */
+           /*normal*/
+        @media(min-width:1200px){
+            body{
+                background-color: rgb(2, 2, 2);
+                font-size: 80px;
+                color: chartreuse;
+            }
+        
+        }
+  </style>    
+</head>
+
+<body >
+    <div  id="navbar">
+        <a style="font-family: Sofia, sans-serif" class="active" href="javascript:void(0)">my only wish is killing me aaaaaaaaaaaaaaaaaaaaaaaaand nowwwwww!!!!!!!!</a>
+
+      </div>
+    <img src="https://avatar.amuniversal.com/user_avatars/avatars_gocomicsver3/2944000/2944963/bugs.jpg" alt="Avatar" style="width:20%">
+    <div class="side">
+      <h2><b>bugs bunny</b></h2>
+      <p>programmer & Engineer and very hot 🔥</p>
+    </div>
+  </div>
+  <div class="box">
+    <header style="color: cyan;">i know</header>
+    <P>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+    </P>
+  </div>
+  <div class="box">
+    <header style="color: cyan;">what do you know</header>
+    <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, aspernatur.
+    </P>
+  </div>
+
+  <div>
+    <h3>Sticky Navigation Example</h3>
+    <p>The navbar will stick to the top when you reach its scroll position.</p>
+    <p> Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+    <p> Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+    <p> Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+    <p> Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+    <p> Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+    <p> Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+    <p> Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+  </div>
+  <button class="myrange slidecontainer"><input type="range" min="10" max="100" value="50" class="slider"></button>
+  <script>
+    window.onscroll = function() {myFunction()};
+
+    var navbar = document.getElementById("navbar");
+    var sticky = navbar.offsetTop;
+
+    function myFunction() {
+      if (window.pageYOffset >= sticky) {
+        navbar.classList.add("sticky")
+      } else {
+        navbar.classList.remove("sticky");
+      }
+    }
+    </script>
+</body>
+</html>
