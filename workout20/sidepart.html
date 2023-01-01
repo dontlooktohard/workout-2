@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Queries</title>
+
+    <style>
+        html, body {
+         min-height: 100%;
+        }
+
+        .box{
+            width: 200px;
+            height: 200px;
+            background-color: black;
+            color:white;
+
+        }
+        .container{
+            position: relative;
+            width: max-content;
+            height: max-content;
+        }
+        #pg1{
+            position: absolute;
+            top: 100px;
+            left: 150px;
+
+        }
+        #pg2{
+            position: absolute;
+            top: 100px;
+            left: 400px;
+
+        }
+        #pg3{
+            position: absolute;
+            top: 100px;
+            left: 650px;
+
+        }
+        #pg4{
+            position: absolute;
+            top: 100px;
+            left: 900px;
+
+        }
+        /*phone */
+        @media only screen and (max-width: 500px){
+            .box{
+              width: 500px;  
+              height: 600px;
+              padding: 60px;
+            block-size: fit-content;
+            background-color: black;
+            color:white;
+        }
+
+        #pg1{
+            position: absolute;
+            top: 5px;
+            left: 50px;
+            display: none;
+
+        }
+        #pg2{
+            position: absolute;
+            top: 0px;
+            left:10px;
+            margin: 1px;
+            
+        }
+        #pg3{
+            position: absolute;
+            top:  300px;
+            left: 1px;
+            margin: 1px;
+
+        }
+        #pg4{
+            position: absolute;
+            top: 600px;
+            left: 50px;
+            display: none;
+
+        }
+
+        }
+
+        </style>
+
+    </style>
+</head>
+<body>
+    <div class="container">
+    <div id="pg1" class="box">
+         <h1>first item</h1>
+    <p >Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea facere exercitationem ad neque molestiae accusantium rem sint in velit culpa!</p>
+    </div>
+    <div id="pg2" class="box">
+        <h1>Second item</h1>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo officiis ducimus earum dolores facilis explicabo blanditiis possimus voluptatibus atque iure!</p>
+    </div>
+    <div id="pg3" class="box">
+        <h1>Third item</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus nihil beatae suscipit, commodi assumenda corrupti fugiat aliquid placeat provident ipsum.</p>
+    </div>
+    <div id="pg4" class="box">
+       <h1>fourth item</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique corporis debitis corrupti praesentium ipsa fugit quas maxime voluptatem perspiciatis assumenda?</p>
+    </div>
+</div>
+</body>
+</html>
