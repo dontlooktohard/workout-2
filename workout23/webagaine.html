@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title> landing page</title>
+    <style>
+      *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.7em;
+    background-color: gray;
+}
+a{
+    color: #333;
+    text-decoration: none;
+}
+
+h1,h2,h3{
+    padding-bottom: 20px;
+}
+p{
+    margin: 10px 0;
+}
+/*extra*/
+.container {
+    margin: auto;
+    max-width: 1100px;
+    overflow: auto;
+    padding: 0 10px;
+}
+.text-primary {
+    color: #b4833b;
+}
+      #navbar a{
+    color:#fff
+}
+#navbar h1 {
+    float: left;
+    padding-top: 20px;  
+}
+#navbar ul{
+    float: right;
+    list-style: none;
+}
+#navbar li{
+    float: left;  
+}
+#navbar  li a{
+    display: block;
+    padding: 20px;
+    text-align: center;
+} 
+#navbar ul li a:hover,
+navbar ul li a.current{
+    background: #BA8E4A;
+    color: rgb(77, 75, 75);
+}
+#info{
+  position: absolute;
+  bottom: 300px;
+  left: 100px;
+
+}
+    </style>
+</head>
+<body>
+    <header>
+        <nav id="navbar">
+          <div id="container"> 
+             <h1 class="logo"><a href="index.html">the logo📺</a></h1>
+             <ul>
+              <li><a href="">about me</a></li>  
+              <li><a href="">my Contact</a></li>  
+              <li><a href="">subscribe</a></li>  
+            </ul>
+          </div>
+      </nav>
+    </header>
+    <section id="info">
+      <h2><span class="text-primary">my background</span></h2>
+     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem tenetur in itaque reprehenderit? Vitae officia rem impedit explicabo itaque quia possimus, nobis sequi veniam aliquam, ducimus ullam tempora praesentium quisquam!</p>
+    <ul>
+        <li>what m i good for</li>
+        <li>what are my hobbies</li>
+     </ul>
+    </section>
+</body>
+</html>
