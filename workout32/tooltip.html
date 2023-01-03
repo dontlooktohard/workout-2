@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tooltips</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+        }
+        p{
+            width: 100%;
+            position: absolute;
+            transform: translate(-50%, -50%);
+            left: 50%;
+            top: 50%;
+            background-color: #fff;
+            padding: 3.5rem;
+            text-align: center;
+            font-size: 16px;
+        }
+        a{
+            position: relative;
+            color: orange;
+            font-size: inherit;
+        }
+        a::after{
+            position: absolute;
+            width: 12rem;
+            background-color: black;
+            content: attr(data-tip);
+            padding: 0.6rem 0;
+            color: #fff;
+            margin: auto;
+            left: -4.5rem;
+            right: 0;
+            bottom: 1.5rem;
+            text-align: center;
+            border-radius: 0.2rem;
+        }
+        a::before{
+            position: absolute;
+            content: "";
+            height: 0;
+            width: 0;
+            border-top: 0.5rem solid grey;
+            border-left: 0.5rem solid transparent;
+            border-right:0.5rem solid transparent;
+            margin: auto;
+            left:0;
+            right: 0;
+            bottom: 1rem;  
+        }
+        a::before,
+        a::after{
+            display: none;
+        }
+        a:hover::before,
+        a:hover::after{
+            display: block;
+        }
+        
+
+    </style>
+</head>
+<body>
+    <section id="tool">
+    <p>Lorem ipsum dolor sit  amet , consectetur adipisicing elit. Quam nemo temporibus dignissimos odit voluptatem, distinctio sapiente sed dolorem cupiditate aliquam ut harum quos a fugit vero asperiores nesciunt possimus. Labore asperiores numquam vitae culpa at. Non ullam dolorem nulla quasi. Porro quibusdam, quos distinctio nulla corrupti consequuntur sit. Dolorem, illo.</p>
+    <br>
+    <br>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <a href="#" data-tip="some more information">Perferendis </a>voluptatibus odio id necessitatibus, at placeat fugit provident mollitia voluptatem labore deserunt voluptatum <a href="#" data-tip="okkkkkkkkkkkkkkkkkk">repellat? </a>Libero impedit quas ipsum illum veniam in necessitatibus animi placeat veritatis voluptates repudiandae corrupti iusto voluptate illo ex quaerat atque optio numquam tenetur, dolor enim et? Sit!</p>
+</section>
+</body>
+</html>
