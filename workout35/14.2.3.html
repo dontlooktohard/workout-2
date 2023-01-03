@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>14.2</title>
+
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        body{
+            background-color: lightgray;
+            display:flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            color: #fff;
+            font-size: 30px;
+            
+        }
+     .box{
+         overflow: hidden;
+        position: relative;
+       height: 100px;
+       width: 100px;
+       border: #333 solid 4px;
+       margin-bottom: 2rem ;
+       text-align: center;
+       
+       
+      
+     }
+     .container{
+        display: flex;
+        flex-direction: column;
+        flex: space-between;
+     }
+     .box5::before{
+        position: absolute;
+       height: 100px;
+       width: 100px;
+       left: 0px;
+       font-size: 100px;
+       
+       content: "";
+       transform: skew(0deg);
+       transition: transform 1s ease-in-out;
+     }
+     .box5:hover::before{
+        transform: skew(45deg,10deg);
+        background-color:pink ;
+     }
+
+     .box4::before{
+        overflow: inherit;
+        position: absolute;
+       height: 200px;
+       width: 200px;
+       left: -50px;
+       bottom: -50px;
+       font-size: 100px;
+       content: "Scale";
+       transform: Scale(1);
+       transition: all 1s ease-in-out;
+     }
+     .box4:hover::before {
+        transform: Scale(0.5);
+        background-color:black;
+    }
+     
+     .box3::before{
+        position: absolute;
+       height: 200px;
+       width: 100px;
+       left: 200px;
+       top: 0px;
+       background-color:yellow;
+       content: " ";
+       transform-origin: top left;
+       transform: rotate(0deg);
+       transition:  1s ease-in-out;
+     }
+     .box3:hover::before {
+        transform: rotate(90deg);
+     }
+
+     .box2::before{
+        position: absolute;
+       height: 100px;
+       width: 200px;
+       left: 0px;
+       background-color:blue ;
+       content: "";
+       transform: translateX(200px);
+       transition:  0.5s ease-in-out;
+     }
+     .box2:hover::before {
+        transform: translateX(0);
+     } 
+
+     .box1::before{
+        position: absolute;
+       height: 100px;
+       width: 200px;
+       right: 0px;
+       background-color:red;
+       content: "Cool!";
+       transform: translateY(-100px);
+       transition: all 0.5s ease-in-out;
+     }
+     .box1:hover::before{
+        transform: translateX(0);
+     }
+
+    
+     
+     .box1{
+        width: 200px;
+        padding: 0;
+     }
+     .box2{
+        width: 200px;
+        padding: 0;
+     }
+     .box3{
+        width: 200px;
+        padding: 0;
+     }
+    </style>
+</head>
+<body>
+    <div id="container">
+    <div class="box1 box">TranslateY</div>
+    <div class="box2 box">TranslateX</div>
+    <div class="box3 box">Rotate</div>
+    <div class="box4 box">Scale</div>
+    <div class="box5 box">Skew</div>
+</div>
+</div>
+</body>
+</html>
