@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>14.2</title>
+
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        body{
+            background-color: #333;
+            display:flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+     .box{
+         overflow: hidden;
+        position: relative;
+       height: 400px;
+       width: 400px;
+       background-color: coral;
+      
+     }
+
+     .box::before{
+        position: absolute;
+       height: 400px;
+       width: 400px;
+       background-color:blue;
+       content: "";
+       transform: translateX(400px);
+       transition: transform 0.5s ease-in-out, background-color 0.5s ease-in-out;
+     }
+ 
+     .box:hover::before{
+
+        transform: translateX(0);
+     }
+    </style>
+</head>
+<body>
+    <div id="container">
+    <div class="box"></div>
+</div>
+</body>
+</html>
