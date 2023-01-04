@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Grid Gallery</title>
+  <style>
+    *,
+    ::after,
+    ::before {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      width: 100%;
+      height: 100%;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .container div img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+
+
+    .container {
+      border: solid 2px;
+      width: 100%;
+      height: 90vh;
+      display: grid;
+      /* grid-template-columns: repeat(8, 1fr);
+      grid-template-rows: repeat(7, 1fr); */
+      grid-template-areas:
+        'box1 box1 box2 box2 box2 box3 box4 box4'
+        'box1 box1 bo2x box2 box2 box3 box4 box4'
+        'box5 box5 box2 box2 box2 box8 box8 box9'
+        'box5 box5 box6 box6 box7 box8 box8 box9'
+        'box5 box5 box6 box6 box12 box12 box12 box9'
+        'box10 box11 box11 box12 box13 box13 box13 box14'
+        'box10 box11 box11 box12 box13 box13 box13 box14';
+      gap: 2rem;
+    }
+
+    .box1 {
+      grid-area: box1;
+      background-image: url(./img/1.jpeg);
+    }
+
+    .box2 {
+      grid-area: box2;
+      background-image: url(./img/2.jpeg);
+    }
+
+    .box3 {
+      grid-area: box3;
+      background-image: url(./img/3.jpeg);
+    }
+
+    .box4 {
+      grid-area: box4;
+      background-image: url(./img/4.jpeg);
+    }
+
+    .box5 {
+      grid-area: box5;
+      background-image: url(./img/5.jpeg);
+    }
+
+    .box6 {
+      grid-area: box6;
+      background-image: url(./img/6.jpeg);
+    }
+
+    .box7 {
+      grid-area: box7;
+      background-image: url(./img/7.jpeg);
+    }
+
+    .box8 {
+      grid-area: box8;
+      background-image: url(./img/8.jpeg);
+    }
+
+    .box9 {
+      grid-area: box9;
+      background-image: url(./img/9.jpeg);
+    }
+
+    .box10 {
+      grid-area: box10;
+      background-image: url(./img/10.jpeg);
+    }
+
+    .box11 {
+      grid-area: box11;
+      background-image: url(./img/11.jpeg);
+    }
+
+    .box12 {
+      grid-area: box12;
+      background-image: url(./img/12.jpeg);
+    }
+
+    .box13 {
+      grid-area: box13;
+      background-image: url(./img/13.jpeg);
+    }
+
+    .box14 {
+      grid-area: box14;
+      background-image: url(./img/14.jpeg);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+    <div class="box4"></div>
+    <div class="box5"></div>
+    <div class="box6"></div>
+    <div class="box7"></div>
+    <div class="box8"></div>
+    <div class="box9"></div>
+    <div class="box10"></div>
+    <div class="box11"></div>
+    <div class="box12"></div>
+    <div class="box13"></div>
+    <div class="box14"></div>
+  </div>
+</body>
+
+</html>
