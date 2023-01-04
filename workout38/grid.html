@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid</title>
+    <style>
+     .item{
+        display: grid;
+        grid-template-areas: 
+        'box1 box1 box2 box2'
+        'box3 box3 box3 box4'
+        'box5 box5 box5 box5';
+        grid-gap: 0.7rem;
+        
+     }
+     
+     .box1{
+        background-color: crimson;
+        text-align: center;
+        padding: 1rem;
+        border-radius: 5%;
+        grid-area: box1;
+     }
+     .box2{
+        background-color: blueviolet;
+        text-align: center;
+        padding: 1rem;
+        border-radius: 5%;
+        grid-area: box2;
+     }
+     .box3{
+        background-color: purple;
+        text-align: center;
+        padding: 1rem;
+        border-radius: 5%;
+        grid-area: box3;
+     }
+     .box4{
+        background-color: green;
+        text-align: center;
+        padding: 1rem;
+        border-radius: 5%;
+        grid-area: box4;
+        /* grid-area: 4 /1/ auto / span 2; */
+     }
+     .box5{
+        background-color: gold;
+        text-align: center;
+        padding: 1rem;
+        border-radius: 5%;
+        grid-area: box5;
+        /* grid-area: 5 /1/ auto / span 2; */
+     }
+    </style>
+</head>
+<body>
+    <div class="item">
+        <div class="box1">1 </div>
+        <div class="box2">2 </div>
+        <div class="box3">3 </div>
+        <div class="box4">4 </div>
+        <div class="box5">5 </div>
+    </div>
+</body>
+</html>
