@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            width: 500px;
+            height: 50vh;
+            margin-top: 20vh;
+            display: grid;
+            grid-template-rows: repeat(3, 1fr);
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-areas:
+                'box1 box1 box1 box1 box1'
+                'box2 box3 box3 box3 box4'
+                'box5 box5 box5 box5 box5';
+            grid-gap: 0.7rem;
+
+        }
+
+        .box {
+            text-align: center;
+            padding: 1rem;
+            border-radius: 5%;
+        }
+
+        .box1 {
+            background-color: crimson;
+            grid-area: box1;
+        }
+
+        .box2 {
+            background-color: blueviolet;
+            grid-area: box2;
+        }
+
+        .box3 {
+            background-color: green;
+            grid-area: box3;
+        }
+
+        .box4 {
+            background-color: purple;
+            grid-area: box4;
+        }
+
+        .box5 {
+            background-color: gold;
+            grid-area: box5;
+        }
+
+        @media (max-width: 500px) {
+            .container {
+                width: 100%;
+                height: 100%;
+                display: grid;
+                grid-template-rows: repeat(3, 1fr);
+                grid-template-columns: repeat(4, 1fr);
+                grid-template-areas:
+                    'box1 box1 box1 box1 box1'
+                    'box2 box2 box2 box2 box2'
+                    'box3 box3 box3 box3 box3'
+                    'box4 box4 box4 box4 box4'
+                    'box5 box5 box5 box5 box5';
+
+            }
+        }
+
+        @media (min-width:501px) and (max-width: 768px) {
+            .container {
+                width: 100%;
+                height: 100%;
+                display: grid;
+                grid-template-rows: repeat(3, 1fr);
+                grid-template-columns: repeat(4, 1fr);
+                grid-template-areas:
+                    'box1 box1 box1 box1 box1'
+                    'box2 box2 box3 box3 box3'
+                    'box4 box4 box4 box4 box4'
+                    'box5 box5 box5 box5 box5';
+
+            }
+        }
+
+        @media (min-width:769px) and (max-width: 1200px) {
+            .container {
+                width: 100%;
+                height: 100%;
+                display: grid;
+                grid-template-rows: repeat(3, 1fr);
+                grid-template-columns: repeat(4, 1fr);
+                grid-template-areas:
+                    'box1 box1 box1 box1 box1'
+                    'box2 box2 box4 box4 box4'
+                    'box3 box3 box3 box3 box3'
+                    'box5 box5 box5 box5 box5';
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box1 box">Header.</div>
+        <div class="box2 box">Sidebar. </div>
+        <div class="box3 box">Content Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque numquam maiores
+            repellat? Dolore, voluptatum nisi? </div>
+        <div class="box4 box">Side bar 2 </div>
+        <div class="box5 box">Footer </div>
+    </div>
+</body>
+
+</html>
